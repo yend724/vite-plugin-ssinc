@@ -28,13 +28,9 @@ const vitePluginSsinc = (options: Options = {}): Plugin => {
 
     handleHotUpdate({ server, file }) {
       updateAbsFilePath = file;
-      const extension = path.extname(updateAbsFilePath);
-
-      if (includeExtensions.indexOf(extension) !== -1) {
-        server.ws.send({
-          type: 'full-reload',
-        });
-      }
+      server.ws.send({
+        type: 'full-reload',
+      });
       return [];
     },
 
