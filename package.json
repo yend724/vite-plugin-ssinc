@@ -1,13 +1,11 @@
 {
   "name": "vite-plugin-ssinc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The plugin for including SSI-like includes in Vite.",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "build": "rm -rf ./types && rm -rf ./dist && npm run build:types && npm run build:ts",
-    "build:ts": "npx parcel build src/index.ts",
-    "build:types": "tsc --declaration --emitDeclarationOnly --outdir './types'",
+    "build": "tsc",
     "check:types": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
@@ -34,7 +32,6 @@
     "@parcel/packager-ts": "^2.8.3",
     "@parcel/transformer-typescript-types": "^2.8.3",
     "@types/node": "^18.15.13",
-    "parcel": "^2.8.3",
     "typescript": "^5.0.4",
     "vite": "^4.3.1"
   }
