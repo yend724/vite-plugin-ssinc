@@ -6,7 +6,7 @@ import { formatOptions } from './utils';
 export type Options = Partial<{
   includeExtensions: string[];
 }>;
-export const vitePluginSsinc = (options: Options = {}): Plugin => {
+const vitePluginSsinc = (options: Options = {}): Plugin => {
   let projectRootPath = '';
   let updateAbsFilePath = '';
 
@@ -89,3 +89,5 @@ export const vitePluginSsinc = (options: Options = {}): Plugin => {
     },
   };
 };
+
+export default vitePluginSsinc;

@@ -22,7 +22,7 @@ To use Vite Plugin Ssinc, add it to your Vite configuration file:
 
 ```js
 // vite.config.js
-import { vitePluginSsinc } from 'vite-plugin-ssinc';
+import vitePluginSsinc from 'vite-plugin-ssinc';
 
 export default {
   plugins: [
