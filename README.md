@@ -1,6 +1,6 @@
 # Vite Plugin Ssinc
 
-[Vite Plugin Ssinc](https://github.com/yend724/vite-plugin-ssinc) is a plugin for [Vite](https://vitejs.dev/) that allows for SSI-like syntax (with only `#include` supported) to be used in HTML files.
+[Vite Plugin Ssinc](https://github.com/yend724/vite-plugin-ssinc) is a plugin for [Vite](https://vitejs.dev/) that allows for Server Side Includes like syntax (with only `#include` supported) to be used in HTML files.
 
 ## Installation
 
@@ -27,7 +27,7 @@ import vitePluginSsinc from 'vite-plugin-ssinc';
 export default {
   plugins: [
     vitePluginSsinc({
-      includeExtensions: ['shtml', ".html"],
+      includeExtensions: ['shtml', "html"],
     }),
   ],
 };
