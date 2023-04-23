@@ -1,0 +1,5 @@
+dist/
+node_modules/
+types/
+.parcel-cache
+.DS_Store

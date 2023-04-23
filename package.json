@@ -1,0 +1,38 @@
+{
+  "name": "vite-plugin-ssinc",
+  "version": "1.0.0",
+  "description": "The plugin for including SSI-like includes in Vite.",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "npm run build:types && npm run build:ts",
+    "build:ts": "npx parcel build src/index.ts",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outdir './types'",
+    "check:types": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yend724/vite-plugin-ssinc.git"
+  },
+  "files": [
+    "dist",
+    "types",
+    "src"
+  ],
+  "keywords": [
+    "vite",
+    "ssi"
+  ],
+  "author": "YEND",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yend724/vite-plugin-ssinc/issues"
+  },
+  "homepage": "https://github.com/yend724/vite-plugin-ssinc#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "parcel": "^2.8.3",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.1"
+  }
+}
