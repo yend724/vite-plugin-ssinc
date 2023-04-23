@@ -55,4 +55,4 @@ When Vite serves your site, the SSI directives will be processed and the include
 
 ## License
 
-Vite Plugin Ssinc is licensed under the [MIT License](https://github.com/username/repo/blob/master/LICENSE).
+Vite Plugin Ssinc is licensed under the [MIT License](https://github.com/yend724/vite-plugin-ssinc/blob/main/LICENSE).
