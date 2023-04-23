@@ -1,7 +1,7 @@
 import path from 'node:path';
 import fs from 'node:fs';
 import type { Plugin } from 'vite';
-import { formatOptions } from './utils';
+import { formatOptions } from './utils.js';
 
 export type Options = Partial<{
   includeExtensions: string[];

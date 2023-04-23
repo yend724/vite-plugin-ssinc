@@ -1,8 +1,9 @@
 {
   "name": "vite-plugin-ssinc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The plugin for including SSI-like includes in Vite.",
   "main": "dist/index.js",
+  "type": "module",
   "types": "types/index.d.ts",
   "scripts": {
     "build": "tsc",
