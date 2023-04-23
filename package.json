@@ -8,7 +8,8 @@
     "build": "npm run build:types && npm run build:ts",
     "build:ts": "npx parcel build src/index.ts",
     "build:types": "tsc --declaration --emitDeclarationOnly --outdir './types'",
-    "check:types": "tsc --noEmit"
+    "check:types": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,8 @@
   },
   "homepage": "https://github.com/yend724/vite-plugin-ssinc#readme",
   "devDependencies": {
+    "@parcel/packager-ts": "^2.8.3",
+    "@parcel/transformer-typescript-types": "^2.8.3",
     "@types/node": "^18.15.13",
     "parcel": "^2.8.3",
     "typescript": "^5.0.4",
