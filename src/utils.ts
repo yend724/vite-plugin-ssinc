@@ -1,4 +1,4 @@
-import { DEFAULT_OPTIONS } from './config.js';
+import { DEFAULT_OPTIONS } from './options.js';
 import type { Options } from './index.js';
 
 export const formatOptions = (_options: Options): Required<Options> => {
