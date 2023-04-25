@@ -3,9 +3,9 @@ import fs from 'node:fs';
 import type { Plugin } from 'vite';
 import { formatOptions } from './utils.js';
 
-export type Options = Partial<{
-  includeExtensions: string[];
-}>;
+export type Options = {
+  includeExtensions?: string[];
+};
 const vitePluginSsinc = (options: Options = {}): Plugin => {
   let projectRootPath = '';
   let updateAbsFilePath = '';
@@ -28,10 +28,14 @@ const vitePluginSsinc = (options: Options = {}): Plugin => {
 
     handleHotUpdate({ server, file }) {
       updateAbsFilePath = file;
-      server.ws.send({
-        type: 'full-reload',
-      });
-      return [];
+
+      const fileExtension = path.extname(file);
+      if (includeExtensions.indexOf(fileExtension) !== -1) {
+        server.ws.send({
+          type: 'full-reload',
+        });
+        return [];
+      }
     },
 
     async transformIndexHtml(html) {
