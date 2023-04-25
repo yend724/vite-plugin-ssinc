@@ -18,7 +18,7 @@ yarn add vite-plugin-ssinc
 
 ## Usage
 
-To use Vite Plugin Ssinc, add it to your Vite configuration file:
+To use Vite Plugin Ssinc, add the following to your Vite configuration file.
 
 ```js
 // vite.config.js
@@ -27,13 +27,11 @@ import vitePluginSsinc from 'vite-plugin-ssinc';
 export default {
   plugins: [
     vitePluginSsinc({
-      includeExtensions: ['shtml', "html"],
+      includeExtensions: ['shtml', 'html'],
     }),
   ],
 };
 ```
-
-The `includeExtensions` option is used to specify which file extensions should be checked for SSI directives. By default, only `.shtml` files are checked.
 
 In your HTML files, you can use SSI directives like so:
 
@@ -52,6 +50,13 @@ In your HTML files, you can use SSI directives like so:
 ```
 
 When Vite serves your site, the SSI directives will be processed and the included files will be included in the HTML response.
+
+### Options
+
+| Option              | Type               | Default  | Required | Description                                                                                                                            |
+|---------------------|-------------------|---------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
+| `includeExtensions` | `Array<string>`   | `['shtml']` | No        | An array of file extensions that should be checked for SSI directives.                                                                  |
+| `apply`              | `'serve' \| 'build'` | None    | No        | The mode in which the plugin should be applied. By default, the plugin will be applied in both development and production builds. |
 
 ## License
 

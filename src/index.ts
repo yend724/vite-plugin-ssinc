@@ -5,6 +5,7 @@ import { formatOptions } from './utils.js';
 
 export type Options = {
   includeExtensions?: string[];
+  apply?: 'serve' | 'build';
 };
 const vitePluginSsinc = (options: Options = {}): Plugin => {
   let projectRootPath = '';
@@ -15,13 +16,13 @@ const vitePluginSsinc = (options: Options = {}): Plugin => {
     'g'
   );
 
-  const { includeExtensions } = formatOptions(options);
+  const { includeExtensions, apply } = formatOptions(options);
   const includeCache: Record<string, string> = {};
 
   return {
     name: 'vite-plugin-ssinc',
     enforce: 'pre',
-
+    apply,
     config(config) {
       projectRootPath = path.resolve(config.root ?? '.');
     },
