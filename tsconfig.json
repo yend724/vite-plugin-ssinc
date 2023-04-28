@@ -5,7 +5,7 @@
     "lib": ["es2020"],
     "sourceMap": true,
     "module": "ES2020",
-    "moduleResolution": "Node",
+    "moduleResolution": "NodeNext",
     "outDir": "./dist",
     "rootDir": "./src",
     "esModuleInterop": true,
@@ -13,6 +13,10 @@
     "skipLibCheck": true,
     "declaration": true,
     "declarationMap": true
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
