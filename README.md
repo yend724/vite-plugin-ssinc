@@ -33,6 +33,21 @@ export default {
 };
 ```
 
+If you want to write it in CommonJS syntax, you can do it like this:
+
+```js
+// vite.config.js
+const vitePluginSsinc = require('vite-plugin-ssinc').default;
+
+export default {
+  plugins: [
+    vitePluginSsinc({
+      includeExtensions: ['shtml', 'html'],
+    }),
+  ],
+};
+```
+
 In your HTML files, you can use SSI directives like so:
 
 ```html
