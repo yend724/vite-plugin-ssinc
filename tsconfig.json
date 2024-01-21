@@ -4,7 +4,7 @@
     "target": "es2020",
     "lib": ["es2020"],
     "sourceMap": true,
-    "module": "ES2020",
+    "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "./dist",
     "rootDir": "./src",
