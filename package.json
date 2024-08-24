@@ -2,18 +2,25 @@
   "name": "vite-plugin-ssinc",
   "version": "1.0.10",
   "description": "The plugin for including SSI-like includes in Vite.",
-  "main": "dist/index.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "type": "module",
   "exports": {
-    "require": "./dist/index.cjs",
-    "import": "./dist/index.mjs"
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "require": "./dist/index.cjs"
+      }
+    }
   },
   "scripts": {
     "build": "run-p build:*",
-    "build:ts": "ts-node scripts/build.ts",
-    "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir './dist'",
+    "build:ts": "tsup",
     "prebuild": "rm -rf ./dist",
     "prepublishOnly": "npm run build"
   },
@@ -39,9 +46,8 @@
   "homepage": "https://github.com/yend724/vite-plugin-ssinc#readme",
   "devDependencies": {
     "@types/node": "^22.5.0",
-    "esbuild": "^0.23.1",
     "npm-run-all": "^4.1.5",
-    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
     "typescript": "^5.5.4",
     "vite": "^5.4.2"
   }
